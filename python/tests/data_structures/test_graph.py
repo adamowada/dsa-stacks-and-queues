@@ -6,7 +6,7 @@ def test_exists():
     assert Graph
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_add_node():
 
     graph = Graph()
@@ -18,7 +18,7 @@ def test_add_node():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_size_empty():
 
     graph = Graph()
@@ -30,7 +30,7 @@ def test_size_empty():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_size():
 
     graph = Graph()
@@ -47,9 +47,13 @@ def test_size():
 @pytest.mark.skip("TODO")
 def test_add_edge():
     g = Graph()
+
+    # Create vertices
     apple = g.add_node("apple")
     banana = g.add_node("banana")
+
     g.add_edge(apple, banana, 5)
+
     neighbors = g.get_neighbors(apple)
     assert len(neighbors) == 1
     assert neighbors[0].vertex.value == "banana"
@@ -67,7 +71,7 @@ def test_bouquet():
     assert neighbors[0].weight == 10
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_add_edge_interloper_start():
 
     graph = Graph()
@@ -80,7 +84,7 @@ def test_add_edge_interloper_start():
         graph.add_edge(start, end)
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_add_edge_interloper_end():
 
     graph = Graph()
